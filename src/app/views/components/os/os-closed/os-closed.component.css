@@ -1,0 +1,51 @@
+.create {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.create h1 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.create button {
+    width: 10%;
+    margin: 1rem auto;
+    width: auto;
+}
+
+.container {
+    width: 90%;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+table {
+    width: 100%;
+}
+
+i {
+    padding: 5px
+}
+
+#cached {
+    color: white;
+}
+
+#info {
+    color: white;
+}
+
+td.baixa {
+    color: rgb(6, 255, 6)
+}
+
+td.media {
+    color: yellow
+}
+
+td.alta {
+    color: red
+}

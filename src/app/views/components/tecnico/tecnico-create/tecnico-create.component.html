@@ -1,0 +1,20 @@
+<h1>Cadastro de Técnico</h1>
+<form class="form mat-elevation-z8">
+    <mat-form-field class="full-width">
+        <mat-label>Nome</mat-label>
+        <input pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" [(ngModel)]="tecnico.nome" [formControl]="nome" required maxlength="100" name="nome" matInput placeholder="Ex. Linus Torvalds">
+        <mat-error *ngIf="nome.invalid">{{ errorValidName() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>CPF</mat-label>
+        <input mask="000.000.000-00" [(ngModel)]="tecnico.cpf" [formControl]="cpf" required name="cpf" matInput placeholder="Ex. 359.896.358-90">
+        <mat-error *ngIf="cpf.invalid">{{ errorValidCPF() }}</mat-error>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Celular</mat-label>
+        <input mask="(00) 0000-00000" [(ngModel)]="tecnico.telefone" [formControl]="telefone" required name="telefone" matInput placeholder="Ex. (11) 9495-99555">
+        <mat-error *ngIf="telefone.invalid">{{ errorValidTelefone() }}</mat-error>
+    </mat-form-field>
+    <button class="mat-elevation-z8" (click)="create()" [disabled]="errorValidName() || errorValidCPF() || errorValidTelefone()" mat-raised-button color="primary">Criar</button>
+    <button class="mat-elevation-z8" (click)="cancel()" mat-raised-button color="warn">Cancelar</button>
+</form>
