@@ -43,6 +43,11 @@ export class ClienteService {
     return this.http.delete<void>(url);
   }
 
+  pdfreport() {
+    const url = `${this.baseUrl}/cliente/pdfreport`
+    window.open(url)
+  }
+
   message(msg: String): void{
     this.snack.open(`${msg}`, 'OK', {
     horizontalPosition: 'center',

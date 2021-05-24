@@ -1,8 +1,11 @@
-<div class="container">
+<div class="container" id="htmlData">
     <h1>Observações da Ordem de Serviço</h1>
     <mat-card class="mat-elevation-z8">
         <p id="abertura">Data de Abertura: {{os.dataAbertura }}</p>
         <p>{{os.observacoes}}</p>
     </mat-card>
     <button (click)="cancel()" class="mat-elevation-z8" mat-raised-button color="warn">CANCELAR</button>
+    <button class="mat-elevation-z12" mat-raised-button color="primary">
+        <i class="material-icons">picture_as_pdf</i>
+    </button>
 </div>

@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -58,7 +57,7 @@ import { OsClosedComponent } from './views/components/os/os-closed/os-closed.com
     OsUpdateComponent,
     OsViewComponent,
     OsClosedComponent
-  ],
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -82,7 +81,7 @@ import { OsClosedComponent } from './views/components/os/os-closed/os-closed.com
     MatPaginatorModule,
     MatSnackBarModule,
     MatMenuModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
     
   ],
   providers: [],

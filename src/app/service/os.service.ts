@@ -41,6 +41,11 @@ export class OsService {
     return this.http.delete<void>(url);
   }
 
+  pdfreport() {
+    const url = `${this.baseUrl}/os/pdfreport`
+    window.open(url)
+  }
+
   message(msg: String): void{
     this.snack.open(`${msg}`, 'OK', {
     horizontalPosition: 'center',

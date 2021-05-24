@@ -1,5 +1,3 @@
-
-import { validateHorizontalPosition } from '@angular/cdk/overlay';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -15,7 +13,7 @@ export class TecnicoService {
   baseUrl: String = environment.baseUrl;
 
   constructor(
-    private http : HttpClient,
+    private http: HttpClient,
     private snack: MatSnackBar) { }
 
   findAll(): Observable<Tecnico[]> {
@@ -23,7 +21,7 @@ export class TecnicoService {
     return this.http.get<Tecnico[]>(url);
   }
 
-  findById(id : any):Observable<Tecnico>{
+  findById(id: any): Observable<Tecnico> {
     const url = `${this.baseUrl}/tecnico/${id}`;
     return this.http.get<Tecnico>(url);
   }
@@ -33,21 +31,27 @@ export class TecnicoService {
     return this.http.post<Tecnico[]>(url, tecnico);
   }
 
-  update(tecnico: Tecnico):Observable<Tecnico> {
+  update(tecnico: Tecnico): Observable<Tecnico> {
     const url = `${this.baseUrl}/tecnico/${tecnico.id}`;
     return this.http.put<Tecnico>(url, tecnico);
   }
 
-  delete(id : any):Observable<void> {
+  delete(id: any): Observable<void> {
     const url = `${this.baseUrl}/tecnico/${id}`;
     return this.http.delete<void>(url);
   }
 
-  message(msg: String): void{
+  pdfreport() {
+    const url = `${this.baseUrl}/tecnico/pdfreport`
+    window.open(url)
+  }
+
+
+  message(msg: String): void {
     this.snack.open(`${msg}`, 'OK', {
-    horizontalPosition: 'center',
-    verticalPosition: 'top',
-    duration:4000
-  })
+      horizontalPosition: 'center',
+      verticalPosition: 'top',
+      duration: 4000
+    })
   }
 }

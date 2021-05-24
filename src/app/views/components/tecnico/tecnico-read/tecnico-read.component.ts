@@ -4,6 +4,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 import { Tecnico } from 'src/app/models/tecnico';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+import { Observable } from 'rxjs';
+
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-tecnico-read',
@@ -39,4 +43,10 @@ export class TecnicoReadComponent implements AfterViewInit {
   navigateToCreate():void {
     this.router.navigate(['tecnico/create'])
   }
+
+  baseUrl: String = environment.baseUrl;
+  
+  pdfreport():void{
+      this.service.pdfreport()        
+  }  
 }

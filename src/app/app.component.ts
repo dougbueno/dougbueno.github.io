@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as jsPDF from 'jspdf';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styles: []
 })
 export class AppComponent {
-  title = 'douglas';
+
 }

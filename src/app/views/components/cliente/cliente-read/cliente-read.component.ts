@@ -38,6 +38,10 @@ export class ClienteReadComponent implements AfterViewInit {
   navigateToCreate():void {
     this.router.navigate(['cliente/create'])
   }
+
+  pdfreport():void{
+    this.service.pdfreport()        
+}  
 }
 
   

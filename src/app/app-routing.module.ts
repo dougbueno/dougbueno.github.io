@@ -29,7 +29,8 @@ const routes: Routes = [
   { path: 'os/create', component: OsCreateComponent },
   { path: 'os/update/:id', component: OsUpdateComponent },
   { path: 'os/view/:id', component: OsViewComponent },
-  { path: 'os/closed', component: OsClosedComponent }
+  { path: 'os/closed', component: OsClosedComponent },
+  
 ];
 
 @NgModule({
